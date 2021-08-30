@@ -3,10 +3,13 @@ import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Section from './Section/Section';
 import Notification from './Notification/Notification';
-import data from './../data/data';
 
 class App extends Component {
-  state = data;
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
 
   onLeaveFeedback = option => {
     this.setState(state => ({
